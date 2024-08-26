@@ -23,7 +23,7 @@ public class JDBCTemplate {
             // 자동 커밋 설정을 수동 커밋 설정으로 변경하여 서비스에서 처리할 수 있도록 한다.
             con.setAutoCommit(false);
 
-            System.out.println("con = " + con);
+//            System.out.println("con = " + con);
 
         } catch (Exception e) {
             throw new RuntimeException(e);
