@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- IoC 가 직접 의존성을 주입할 수 있도록 설정하는 것이 목표 -->
+    <bean id="account" class="com.hitsuni.common.PersonalAccount">
+        <constructor-arg index="0" value="20"/>
+        <constructor-arg index="1" value="110-234-567890"/>
+    </bean>
+
+    <!-- 1. 생성자 주입
+         생성된 다른 bean 을 의존성 주입을 할 경우 value 속성이 아닌 ref 속성을 사용하여 bean id 를 전달
+         생성자의 xml 버전, 생성자 주입을 한 것이다. -->
+<!--    <bean id="member" class="com.hitsuni.common.MemberDTO">-->
+<!--        <constructor-arg name="sequence" value="1"/>-->
+<!--        <constructor-arg name="name" value="홍길동"/>-->
+<!--        <constructor-arg name="phone" value="010-2345-8901"/>-->
+<!--        <constructor-arg name="email" value="hong@gmail.com"/>-->
+<!--        <constructor-arg name="personalAccount" ref="account"/>-->
+<!--    </bean>-->
+
+    <!-- 2. setter 주입 -->
+    <bean id="member" class="com.hitsuni.common.MemberDTO">
+        <property name="sequence" value="1"/>
+        <property name="name" value="홍길동"/>
+        <property name="phone" value="010-2345-8901"/>
+        <property name="email" value="hong@gmail.com"/>
+        <property name="personalAccount" ref="account"/>
+    </bean>
+    <!-- new MemberDTO(1, "", "", "", account)
+         MemberDTO member = new MemberDTO();
+         member.setPersonalAccount(account);
+         -> 이런 식으로 진행되었다는 뜻
+    -->
+</beans>
