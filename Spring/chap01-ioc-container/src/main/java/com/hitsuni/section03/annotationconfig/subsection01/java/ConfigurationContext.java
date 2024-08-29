@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 * basePackages 를 따로 정해주지 않는다면 현재 패키지 기준으로 스캔이 수행된다.
 * @Configuration("이름설정") 이름 설정을 해주지 않으면 클래스명을 default 로 잡는다.
 *  */
-@Configuration
+@Configuration("configurationSection03")
 @ComponentScan(basePackages = "com.hitsuni")
 public class ConfigurationContext {
 

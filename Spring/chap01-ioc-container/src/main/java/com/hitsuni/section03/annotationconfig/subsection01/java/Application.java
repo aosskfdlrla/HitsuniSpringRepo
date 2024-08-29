@@ -14,7 +14,7 @@ public class Application {
     }
 }
 
-/* 결과
+/* 스캐닝 결과
 * beanName : org.springframework.context.annotation.internalConfigurationAnnotationProcessor
 * beanName : org.springframework.context.annotation.internalAutowiredAnnotationProcessor
 * beanName : org.springframework.context.event.internalEventListenerProcessor
