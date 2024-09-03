@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>regist</title>
+</head>
+<body>
+<h1>@ModelAttribute로 파라미터 값 전달 받기</h1>
+<h3>메뉴 검색하기</h3>
+<!-- 앞에 '/' 가 없다면 상대적인 경로로 보내겠다는 뜻. -->
+<form action="search" method="post">
+    메뉴명: <input type="text" name="name"/><br>
+    메뉴 가격: <input type="number" name="price"/><br>
+    메뉴 카테고리:
+    <select name="categoryCode">
+        <option value="1">식사</option>
+        <option value="2">음료</option>
+        <option value="3">디저트</option>
+    </select><br>
+    판매 상태 : <input type="text" name="orderAbleStatus"/><br>
+    <button>검색하기</button>
+</form>
+</body>
+</html>

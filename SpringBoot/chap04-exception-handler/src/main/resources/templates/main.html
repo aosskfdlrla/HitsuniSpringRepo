@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>main</title>
+</head>
+<body>
+    <h1>Exception Handler 사용하기</h1>
+    <h2>@ExceptionHandler 어노테이션 사용하기</h2>
+    <button onclick="location.href='controller-null'">NullPointerException 테스트</button>
+    <button onclick="location.href='controller-user'">사용자 정의 Exception 테스트</button>
+
+    <!-- 분리된 컨트롤러에 대해서도 Handler 가 처리를 해주는가?
+        답은 처리가 되지 않으며 Handler 가 작성된 컨트롤러 내에서만 처리를 해준다 즉, 지역적으로만 처리해줌. -->
+    <button onclick="location.href='other-controller-null'">NullPointerException 테스트</button>
+    <button onclick="location.href='other-controller-user'">사용자 정의 Exception 테스트</button>
+
+
+
+</body>
+</html>
