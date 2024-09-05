@@ -1,0 +1,9 @@
+spring:
+  servlet:
+    multipart:
+      # 파일 저장 경로, 들여쓰기 맞춰주어야 같은 계층이라고 인식함
+      location: C:/HitsuniSpringRepo/SpringBoot/chap06-file-upload
+      # 최대 파일 업로드 크기
+      max-file-size: 10MB
+      # 최대 요청 파일 크기
+      max-request-size: 10MB
